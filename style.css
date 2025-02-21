@@ -752,7 +752,7 @@ footer .footer-sociais i:hover {
 .form-group input:focus ~ .line::after,
 .form-group textarea:focus ~ .line::after {
   transform: scaleX(1);
-}
+}}
 
 .submit-button {
   width: 100%;
@@ -1146,4 +1146,4 @@ footer .footer-sociais i:hover {
     width: 20px;
     text-align: center;
   }
-}
+};
