@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Quantyka</title>
   </head>
   <body>
@@ -66,48 +68,91 @@
         </div>
       </div>
     </section>
-    <section id="projects">
-      <h2 class="text-center text-title">Produtos</h2>
-      <div class="flex gap-default flex-wrap">
-        <div class="card text-center">
-          <img src="imgs/frascos-coletores.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Frascos Coletores</h3>
-          <p class="text-base">- Frasco para Coleta com Tiossulfato de 100ml</p>
+    <section id="projects" class="products-section">
+      <h2 class="text-center text-title">
+        <span class="tech-underline">Produtos</span>
+      </h2>
+
+      <div class="products-grid">
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/frascos-coletores.jpg" alt="Frascos Coletores" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Frascos Coletores</h3>
+            <p class="product-description">Frasco para Coleta com Tiossulfato de 100ml</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/reagentes.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Reagentes</h3>
-          <p class="text-base">- Sais - Ácidos - Solventes HPLC - Solventes LC-MS</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/reagentes.jpg" alt="Reagentes" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Reagentes</h3>
+            <p class="product-description">Sais - Ácidos - Solventes HPLC - Solventes LC-MS</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/manipulacao-liquidos.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Manipulação de Líquidos</h3>
-          <p class="text-base">- Ponteiras para micropipetas - Micropipetas - Buretas Digitais - Dispensadores</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/manipulacao-liquidos.jpg" alt="Manipulação de Líquidos" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Manipulação de Líquidos</h3>
+            <p class="product-description">Ponteiras para micropipetas - Micropipetas - Buretas Digitais - Dispensadores</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/plasticos.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Plásticos</h3>
-          <p class="text-base">- Tubos de Centrífuga - Alças para Inoculação Microbiologica - Pipetas Sorologicas Descartáveis - Placas de Petri - Pipeta Pasteur - Placas de Cultivo - Tubo de Criogenia</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/plasticos.jpg" alt="Plásticos" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Plásticos</h3>
+            <p class="product-description">Tubos de Centrífuga - Alças para Inoculação Microbiologica - Pipetas Sorologicas Descartáveis - Placas de Petri - Pipeta Pasteur - Placas de Cultivo - Tubo de Criogenia</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/farmacopeicos.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Padrões Farmacopeicos</h3>
-          <p class="text-base">- Padrões Caracterizados de acordo com a RDC/166</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/farmacopeicos.jpg" alt="Padrões Farmacopeicos" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Padrões Farmacopeicos</h3>
+            <p class="product-description">Padrões Caracterizados de acordo com a RDC/166</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/meios de cultura.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Meios de Cultura</h3>
-          <p class="text-base">- Agar - Caldo - Suplementos</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/meios de cultura.jpg" alt="Meios de Cultura" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Meios de Cultura</h3>
+            <p class="product-description">Agar - Caldo - Suplementos</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/filtração.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Filtração</h3>
-          <p class="text-base">- Papel Filtro - Filtro Fibra de Vidro - Membrana Filtrante - Filtro de Seringa</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/filtração.jpg" alt="Filtração" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Filtração</h3>
+            <p class="product-description">Papel Filtro - Filtro Fibra de Vidro - Membrana Filtrante - Filtro de Seringa</p>
+          </div>
         </div>
-        <div class="card text-center">
-          <img src="imgs/equipamentos.jpg" alt="Capa do projeto 1" loading="lazy" class="rounded-sm shadow-sm" />
-          <h3 class="text-subtitle">Equipamentos</h3>
-          <p class="text-base">- Microscópios - Estufas - Câmara Climática - Banho - Câmara de Fotoestabilidade</p>
+        <div class="product-card" data-aos="fade-up">
+          <div class="card-image">
+            <img src="imgs/equipamentos.jpg" alt="Equipamentos" loading="lazy"/>
+            <div class="hover-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="product-title">Equipamentos</h3>
+            <p class="product-description">Microscópios - Estufas - Câmara Climática - Banho - Câmara de Fotoestabilidade</p>
+          </div>
         </div>
       </div>
     </section>
@@ -232,19 +277,6 @@
         </div>
       </section>
     </footer>
-    <script>
-      let isMenuOpen = false;
-      function handleMenu() {
-        const menu = document.getElementById('header-menu');
-        if (isMenuOpen) {
-          menu.classList.add('none');
-          menu.classList.remove('flex');
-        } else {
-          menu.classList.remove('none');
-          menu.classList.add('flex');
-        }
-        isMenuOpen = !isMenuOpen;
-      }
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
