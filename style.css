@@ -234,12 +234,16 @@ footer .footer-sociais i {
   border-radius: 10px;
   left: 0;
   right: 0;
-  
+  margin: auto;
 }
 
 .logo {
   width: 160px;
-  height: 160px;
+  position: absolute;
+  left: 10;
+  right: 0;
+  margin: inherit;
+  top: 0px;
   border-radius: 10px;
   padding: 40px 0;
 }
@@ -314,91 +318,183 @@ footer .footer-sociais i {
 .menu-item:nth-child(4) { animation-delay: 0.4s; }
 .menu-item:nth-child(5) { animation-delay: 0.5s; }
 
-/* Form Styles */
+/* Seção de Contato */
+.contact {
+  padding: 6rem 3rem;
+  background-color: rgba(173, 180, 211, 0.80);
+}
+
+.contact h2 {
+  text-align: center;
+  color:#12147a;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  border: none;
+}
+
 .contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
 }
 
 .contact-info {
-  margin-bottom: 20px;
+  color: #750c0c;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color:#12147a;
+  border: none;
+}
+.text-base{
+  color:#8b0404;
+}
+
+.contact-info p {
+  margin-bottom:#8b0404;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
 }
 
 .contact-item {
-  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .contact-item i {
-  margin-right: 10px;
+  color: #12147a;
+  font-size: 1.2rem;
+  border:none;
 }
 
+/* Formulário */
 .contact-form {
-  width: 100%;
-  max-width: 600px;
+  background: rgba(173, 180, 211, 0.80);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px 0;
   font-size: 1rem;
+  color: #8b0404;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: none;
 }
 
 .form-group label {
   position: absolute;
-  top: -20px;
-  left: 10px;
-  font-size: 0.9rem;
-  color: #333;
+  left: 0;
+  top: 10px;
+  color: #8b0404;
+  transition: 0.3s;
+  pointer-events: none;
 }
 
 .form-group .line {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #789DBF;
-  transition: width 0.3s ease;
+  width: 100%;
+  height: 1px;
+  background: #8b0404;
 }
 
-.form-group input:focus + .line,
-.form-group textarea:focus + .line {
+.form-group .line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 2px;
+  background: #3b6e9e;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:valid + label,
+.form-group textarea:valid + label {
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  color: #12147a;;
+}
+
+.form-group input:focus ~ .line::after,
+.form-group textarea:focus ~ .line::after {
+  transform: scaleX(1);
 }
 
 .submit-button {
+  width: 100%;
+  padding: 1rem;
+  background:#3b6e9e;
+  color:#8b0404;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  background-color: #789DBF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.submit-button i {
-  margin-left: 10px;
+  gap: 0.5rem;
 }
 
 .submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #0d0f7a;;
+}
+
+/* Carousel Styles */
+.carousel-item {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-item img {
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19);
+  margin: 10px 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #789DBF;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
   background-color: #567a9f;
 }
