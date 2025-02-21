@@ -979,22 +979,7 @@ footer .footer-sociais i:hover {
     top: 63px;
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .logo {
-      max-width: 200px;
-      position: fixed;
-      left: 0;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .logo {
-      max-width: 200px;
-      position: fixed;
-      left: 0;
-    }
-  }
+  
 .hamburger-menu {
   display: none;
 }
