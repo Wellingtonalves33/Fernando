@@ -101,4 +101,75 @@
     const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
     return brightness < 128;
   }
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const dotsContainer = document.querySelector('.carousel-dots');
   
+    let currentIndex = 0;
+    const slideWidth = slides[0].offsetWidth + 32; // Including margin
+  
+    // Create dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  
+    const dots = document.querySelectorAll('.dot');
+  
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+  
+    function goToSlide(index) {
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      updateDots();
+      updateSlides();
+    }
+  
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentIndex);
+        const offset = index - currentIndex;
+        const rotation = offset * 45;
+        slide.style.transform = index === currentIndex 
+          ? 'rotateY(0) scale(1)' 
+          : `rotateY(${rotation}deg) scale(0.9)`;
+      });
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        goToSlide(currentIndex);
+      }
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        goToSlide(currentIndex);
+      }
+    });
+  
+    // Auto-play with smooth item-by-item transition
+    const autoPlay = setInterval(() => {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      goToSlide(currentIndex);
+    }, 5000);
+  
+    // Pause auto-play on hover
+    track.addEventListener('mouseenter', () => clearInterval(autoPlay));
+  });  
