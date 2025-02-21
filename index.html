@@ -1,282 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Quantyka</title>
-  </head>
-  <body>
-    <!--<div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Quantyka</title>
+</head>
+
+<body>
+  <!--<div>
       <a title="Home" class="text-bold text-uppercase black--text">
         <div class="logoHolder"> 
           <img class="logo" src="imgs/logo-Quantika.jpeg"> 
         </div>
       </a>
     </div>-->
-    <header>
-      <div class="header-content">
-        <div class="flex justify-space-between align-center" style="height:18px">
-          <div class="logoHolder">
-            <a class="text-bold text-uppercase black--text">
-              <img class="logo" title="Home" src="imgs/logo-quantika-semfundo.png" class="d-inline-block align-top" alt="">
-            </a>
-          </div>
-          <div class="none block-md">
-            <a href="#" class="text-bold text-uppercase black--text menu-item">
-              <i class="fas fa-home"></i> HOME
-            </a>
-            <a href="#about" class="text-bold text-uppercase black--text menu-item">
-              <i class="fas fa-building"></i> EMPRESA
-            </a>
-            <a href="#projects" class="text-bold text-uppercase black--text menu-item">
-              <i class="fas fa-box-open"></i> PRODUTOS
-            </a>
-            <a href="#businessField" class="text-bold text-uppercase black--text menu-item">
-              <i class="fas fa-chart-line"></i> AREA DE ATUAÇÃO
-            </a>
-            <a href="#contact" class="text-bold text-uppercase black--text menu-item">
-              <i class="fas fa-envelope"></i> CONTATO
-            </a>
-          </div>
-          <div class="d-flex block none-md">
-            <i class="menu-btn mdi mdi-menu" onClick="handleMenu()"></i>
-          </div>
+  <header>
+    <div class="header-content">
+      <div class="flex justify-space-between align-center" style="height:18px">
+        <div class="logoHolder">
+          <a class="logo-link text-bold text-uppercase">
+            <img id="animated-logo" class="logo" title="Home" src="imgs/logo-quantika-semfundo.png" alt="Quantyka Logo">
+          </a>
         </div>
-        <div id="header-menu" class="header-mobile-menu none none-md flex align-center">
-          <a href="#projects" class="text-title text-bold text-uppercase black--text">Projetos</a>
-          <a href="#about" class="text-title text-bold text-uppercase black--text">Sobre</a>
+        <div class="none block-md">
+          <a href="#" class="text-bold text-uppercase black--text menu-item">
+            <i class="fas fa-home"></i> HOME
+          </a>
+          <a href="#about" class="text-bold text-uppercase black--text menu-item">
+            <i class="fas fa-building"></i> EMPRESA
+          </a>
+          <a href="#projects" class="text-bold text-uppercase black--text menu-item">
+            <i class="fas fa-box-open"></i> PRODUTOS
+          </a>
+          <a href="#businessField" class="text-bold text-uppercase black--text menu-item">
+            <i class="fas fa-chart-line"></i> AREA DE ATUAÇÃO
+          </a>
+          <a href="#contact" class="text-bold text-uppercase black--text menu-item">
+            <i class="fas fa-envelope"></i> CONTATO
+          </a>
         </div>
-      </div>
-    </header>
-    <section id="presentation">
-      <img src="imgs/laboratorio-1.jpg" alt="Imagem de apresentação" loading="lazy"/>
-      <div class="presentation-content flex align-center justify-center"></div>
-    </section>
-    <section id="about" class="white">
-      <h2 class="text-center text-title">A Quantyka Science</h2>
-      <div class="flex gap-default justify-space-around flex-column flex-row-md">
-        <div class="card text-center">
-          <p class="text-base">Com 20 anos de experiência em distribuição de produtos de laboratório, a Quantyka Science tem o propósito de atender seus clientes com a solução na medida certa para as suas necessidades, com produtos de qualidade e serviço de excelência!</p>
-        </div>
-        <div class="card text-center">
-          <p class="text-base">Estamos presentes nos diversos segmentos de mercado como Alimentos e Bebidas, Ambiental, Químico e Petroquímico, Farmacêutico dentre outro. Onde houver um laboratório, lá estaremos nós!</p>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="products-section">
-      <h2 class="text-center text-title">
-        <span class="tech-underline">Produtos</span>
-      </h2>
 
-      <div class="products-grid">
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/frascos-coletores.jpg" alt="Frascos Coletores" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Frascos Coletores</h3>
-            <p class="product-description">Frasco para Coleta com Tiossulfato de 100ml</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/reagentes.jpg" alt="Reagentes" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Reagentes</h3>
-            <p class="product-description">Sais - Ácidos - Solventes HPLC - Solventes LC-MS</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/manipulacao-liquidos.jpg" alt="Manipulação de Líquidos" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Manipulação de Líquidos</h3>
-            <p class="product-description">Ponteiras para micropipetas - Micropipetas - Buretas Digitais - Dispensadores</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/plasticos.jpg" alt="Plásticos" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Plásticos</h3>
-            <p class="product-description">Tubos de Centrífuga - Alças para Inoculação Microbiologica - Pipetas Sorologicas Descartáveis - Placas de Petri - Pipeta Pasteur - Placas de Cultivo - Tubo de Criogenia</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/farmacopeicos.jpg" alt="Padrões Farmacopeicos" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Padrões Farmacopeicos</h3>
-            <p class="product-description">Padrões Caracterizados de acordo com a RDC/166</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/meios de cultura.jpg" alt="Meios de Cultura" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Meios de Cultura</h3>
-            <p class="product-description">Agar - Caldo - Suplementos</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/filtração.jpg" alt="Filtração" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Filtração</h3>
-            <p class="product-description">Papel Filtro - Filtro Fibra de Vidro - Membrana Filtrante - Filtro de Seringa</p>
-          </div>
-        </div>
-        <div class="product-card" data-aos="fade-up">
-          <div class="card-image">
-            <img src="imgs/equipamentos.jpg" alt="Equipamentos" loading="lazy"/>
-            <div class="hover-overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="product-title">Equipamentos</h3>
-            <p class="product-description">Microscópios - Estufas - Câmara Climática - Banho - Câmara de Fotoestabilidade</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="businessField">
-      <h2 class="text-center text-title">Área de Atuação</h2>
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="imgs/industria-quimica.jpg" alt="Química">
-            <h3 class="text-subtitle">Química</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/petroquimica.jpg" alt="Petroquimica">
-            <h3 class="text-subtitle">Petroquimica</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/farmaceutica.jpg" alt="Farmacêutica">
-            <h3 class="text-subtitle">Farmacêutica</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/cosméticos.jfif" alt="Cosméticos">
-            <h3 class="text-subtitle">Cosméticos</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/alimentos.jpg" alt="Alimentos">
-            <h3 class="text-subtitle">Alimentos</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/bebidas.png" alt="Bebidas">
-            <h3 class="text-subtitle">Bebidas</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/automotiva.jpeg" alt="Automotivo">
-            <h3 class="text-subtitle">Automotivo</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/academico.jfif" alt="Acadêmico">
-            <h3 class="text-subtitle">Acadêmico</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/ambiental.jfif" alt="Ambiental">
-            <h3 class="text-subtitle">Ambiental</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/saneamento.jpg" alt="Saneamento">
-            <h3 class="text-subtitle">Saneamento</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/P&D.jfif" alt="P&D">
-            <h3 class="text-subtitle">P&D</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/energia.png" alt="Energia">
-            <h3 class="text-subtitle">Energia</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/papelEcelulose.jpg" alt="Papel/Celulose">
-            <h3 class="text-subtitle">Papel/Celulose</h3>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="imgs/analise clinica.jpg" alt="Analises Clinicas">
-            <h3 class="text-subtitle">Analises Clinicas</h3>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div>
-    </section>
-    <footer id="contact" class="text-center grey">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
-      <a href="https://wa.me/5512997639343?text=Olá%20Quantyka,%20poderia%20me%20ajudar?" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888; z-index:1000;" target="_blank">
-        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-      </a>
-      <section id="contact" class="contact">
-        <h2>Entre em Contato</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <h3>Vamos conversar sobre seu projeto!</h3>
-            <p>Preencha o formulário e entraremos em contato em até 24 horas.</p>
-            <div class="contact-details">
-              <div class="contact-item">
+        <div class="hamburger-menu">
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="mobile-nav" id="mobileNav">
+            <div class="menu-items">
+              <a href="#" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+              </a>
+              <a href="#about" class="menu-item">
+                <i class="fas fa-building"></i>
+                <span>EMPRESA</span>
+              </a>
+              <a href="#projects" class="menu-item">
+                <i class="fas fa-box-open"></i>
+                <span>PRODUTOS</span>
+              </a>
+              <a href="#businessField" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>AREA DE ATUAÇÃO</span>
+              </a>
+              <a href="#contact" class="menu-item">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:contato@quantyka.com.br" class="text-base primary--text">contato@quantyka.com.br</a>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>(XX) XXXX-XXXX</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>São Paulo, SP - Brasil</span>
-              </div>
+                <span>CONTATO</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div id="header-menu" class="header-mobile-menu none none-md flex align-center">
+        <a href="#projects" class="text-title text-bold text-uppercase black--text">Projetos</a>
+        <a href="#about" class="text-title text-bold text-uppercase black--text">Sobre</a>
+      </div>
+    </div>
+  </header>
+  <section id="presentation" class="hero-section">
+    <div class="hero-image-container">
+      <img src="imgs/laboratorio-1.jpg" alt="Laboratório Quantyka" loading="lazy" />
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">Excelência em Produtos Laboratoriais</h1>
+      <p class="hero-subtitle">Soluções precisas para seu laboratório</p>
+      <a href="#contact" class="cta-button">Solicite um Orçamento</a>
+    </div>
+    
+    <div class="overlay"></div>
+  </section>
+  <section id="about" class="white">
+    <h2 class="text-center text-title">A Quantyka Science</h2>
+    <div class="flex gap-default justify-space-around flex-column flex-row-md">
+      <div class="card text-center">
+        <p class="text-base">Com 20 anos de experiência em distribuição de produtos de laboratório, a Quantyka Science
+          tem o propósito de atender seus clientes com a solução na medida certa para as suas necessidades, com produtos
+          de qualidade e serviço de excelência!</p>
+      </div>
+      <div class="card text-center">
+        <p class="text-base">Estamos presentes nos diversos segmentos de mercado como Alimentos e Bebidas, Ambiental,
+          Químico e Petroquímico, Farmacêutico dentre outro. Onde houver um laboratório, lá estaremos nós!</p>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="products-section">
+    <h2 class="text-center text-title">
+      <span class="tech-underline">Produtos</span>
+    </h2>
+
+    <div class="products-grid">
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/frascos-coletores.jpg" alt="Frascos Coletores" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Frascos Coletores</h3>
+          <p class="product-description">Frasco para Coleta com Tiossulfato de 100ml</p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/reagentes.jpg" alt="Reagentes" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Reagentes</h3>
+          <p class="product-description">Sais - Ácidos - Solventes HPLC - Solventes LC-MS</p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/manipulacao-liquidos.jpg" alt="Manipulação de Líquidos" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Manipulação de Líquidos</h3>
+          <p class="product-description">Ponteiras para micropipetas - Micropipetas - Buretas Digitais - Dispensadores
+          </p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/plasticos.jpg" alt="Plásticos" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Plásticos</h3>
+          <p class="product-description">Tubos de Centrífuga - Alças para Inoculação Microbiologica - Pipetas
+            Sorologicas Descartáveis - Placas de Petri - Pipeta Pasteur - Placas de Cultivo - Tubo de Criogenia</p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/farmacopeicos.jpg" alt="Padrões Farmacopeicos" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Padrões Farmacopeicos</h3>
+          <p class="product-description">Padrões Caracterizados de acordo com a RDC/166</p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/meios de cultura.jpg" alt="Meios de Cultura" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Meios de Cultura</h3>
+          <p class="product-description">Agar - Caldo - Suplementos</p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/filtração.jpg" alt="Filtração" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Filtração</h3>
+          <p class="product-description">Papel Filtro - Filtro Fibra de Vidro - Membrana Filtrante - Filtro de Seringa
+          </p>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up">
+        <div class="card-image">
+          <img src="imgs/equipamentos.jpg" alt="Equipamentos" loading="lazy" />
+          <div class="hover-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="product-title">Equipamentos</h3>
+          <p class="product-description">Microscópios - Estufas - Câmara Climática - Banho - Câmara de Fotoestabilidade
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="businessField">
+    <h2 class="text-center text-title">Área de Atuação</h2>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="imgs/industria-quimica.jpg" alt="Química">
+          <h3 class="text-subtitle">Química</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/petroquimica.jpg" alt="Petroquimica">
+          <h3 class="text-subtitle">Petroquimica</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/farmaceutica.jpg" alt="Farmacêutica">
+          <h3 class="text-subtitle">Farmacêutica</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/cosméticos.jfif" alt="Cosméticos">
+          <h3 class="text-subtitle">Cosméticos</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/alimentos.jpg" alt="Alimentos">
+          <h3 class="text-subtitle">Alimentos</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/bebidas.png" alt="Bebidas">
+          <h3 class="text-subtitle">Bebidas</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/automotiva.jpeg" alt="Automotivo">
+          <h3 class="text-subtitle">Automotivo</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/academico.jfif" alt="Acadêmico">
+          <h3 class="text-subtitle">Acadêmico</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/ambiental.jfif" alt="Ambiental">
+          <h3 class="text-subtitle">Ambiental</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/saneamento.jpg" alt="Saneamento">
+          <h3 class="text-subtitle">Saneamento</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/P&D.jfif" alt="P&D">
+          <h3 class="text-subtitle">P&D</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/energia.png" alt="Energia">
+          <h3 class="text-subtitle">Energia</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/papelEcelulose.jpg" alt="Papel/Celulose">
+          <h3 class="text-subtitle">Papel/Celulose</h3>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/analise clinica.jpg" alt="Analises Clinicas">
+          <h3 class="text-subtitle">Analises Clinicas</h3>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </section>
+  <footer id="contact" class="text-center grey">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/5512997639343?text=Olá%20Quantyka,%20poderia%20me%20ajudar?"
+      style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888; z-index:1000;"
+      target="_blank">
+      <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+    </a>
+    <section id="contact" class="contact">
+      <h2>Entre em Contato</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Vamos conversar sobre seu projeto!</h3>
+          <p>Preencha o formulário e entraremos em contato em até 24 horas.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:contato@quantyka.com.br" class="text-base primary--text">contato@quantyka.com.br</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>(XX) XXXX-XXXX</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>São Paulo, SP - Brasil</span>
             </div>
           </div>
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" id="name" name="name" required>
-              <label for="name">Nome</label>
-              <div class="line"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" required>
-              <label for="email">Email</label>
-              <div class="line"></div>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" required></textarea>
-              <label for="message">Mensagem</label>
-              <div class="line"></div>
-            </div>
-            <button type="submit" class="submit-button">
-              Enviar Mensagem
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
-      </section>
-    </footer>
-    <script src="scripts.js"></script>
-  </body>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Nome</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Mensagem</label>
+            <div class="line"></div>
+          </div>
+          <button type="submit" class="submit-button">
+            Enviar Mensagem
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
