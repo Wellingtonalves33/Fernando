@@ -41,4 +41,27 @@
         animateMenuItems();
       }
     });
-  });  
+      // Initialize Intersection Observer
+      const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: "0px"
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          } else {
+            entry.target.classList.remove('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('scroll-animation');
+        observer.observe(section);
+      });
+    });
+  
