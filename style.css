@@ -65,6 +65,77 @@ body {
     }
 
   }
+
+  /* Menu Items Styling */
+.menu-item {
+  position: relative; 
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-item i {
+  margin-right: 8px;
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.menu-item:hover {
+  color: #789DBF !important;
+}
+
+.menu-item:hover i {
+  transform: translateY(-2px);
+}
+
+/* Underline Effect */
+.menu-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #789DBF;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* Active State */
+.menu-item.active {
+  color: #789DBF !important;
+}
+
+.menu-item.active::after {
+  width: 100%;
+}
+
+/* Animation for Icon and Text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Stagger animation for menu items */
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
+.menu-item:nth-child(5) { animation-delay: 0.5s; }
+
   .text-title {
 
     font-size: 2rem;
