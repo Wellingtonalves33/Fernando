@@ -376,3 +376,136 @@ body {
   margin: inherit;
   top: 0px;
 }
+:root {
+  --primary-blue: #003B73;
+  --secondary-blue: #0074B7;
+  --primary-red: #BF0426;
+  --secondary-red: #8C031C;
+  --light-gray: #F4F7F6;
+  --white: #ffffff;
+}
+
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(to right, rgba(0,59,115,0.05), rgba(191,4,38,0.05));
+}
+
+/* Layout Components */
+section { padding: 40px 20px; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* Typography */
+a { 
+  text-decoration: none;
+  color: var(--primary-blue);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-red);
+}
+
+/* Color Classes */
+.primary { background-color: var(--primary-blue); }
+.primary--text { color: var(--primary-blue); }
+.secondary { background-color: var(--secondary-blue); }
+.accent { background-color: var(--primary-red); }
+.accent--text { color: var(--primary-red); }
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, rgba(0,59,115,0.9), rgba(191,4,38,0.9));
+  backdrop-filter: blur(10px);
+}
+
+.menu-item {
+  color: var(--white) !important;
+  position: relative;
+ 
+  transition: all 0.3s ease;
+}
+
+.menu-item::after {
+  background-color: var(--white);
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--primary-blue);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-top: 4px solid var(--primary-red);
+}
+
+/* Button Styles */
+.btn {
+  background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, var(--primary-red), var(--secondary-red));
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--white);
+}
+
+footer .footer-sociais i {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+footer .footer-sociais i:hover {
+  color: var(--primary-red);
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  .text-heading {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  
+  header {
+    background: var(--primary-blue);
+  }
+}
+
+@media (min-width: 750px) {
+  .text-heading {
+    font-size: 6.5rem;
+    line-height: 6rem;
+  }
+}
+
+/* Animation Effects */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, var(--primary-blue), var(--primary-red));
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
