@@ -65,3 +65,40 @@
       });
     });
   
+  const logoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const logo = entry.target;
+      const background = getBackgroundColor(logo);
+      const isDark = isBackgroundDark(background);
+      
+      if (isDark) {
+        logo.classList.add('logo-light-mode');
+        logo.classList.remove('logo-dark-mode');
+      } else {
+        logo.classList.add('logo-dark-mode');
+        logo.classList.remove('logo-light-mode');
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('#animated-logo');
+    const logoWrapper = document.createElement('div');
+    logoWrapper.className = 'logo-wrapper';
+    logo.parentNode.insertBefore(logoWrapper, logo);
+    logoWrapper.appendChild(logo);
+    
+    logoObserver.observe(logoWrapper);
+  });
+  
+  function getBackgroundColor(element) {
+    return window.getComputedStyle(element.parentElement).backgroundColor;
+  }
+  
+  function isBackgroundDark(color) {
+    const rgb = color.match(/\d+/g);
+    if (!rgb) return false;
+    const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+    return brightness < 128;
+  }
+  
