@@ -374,7 +374,7 @@ footer .footer-sociais i {
 
 .hero-image-container {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 50%;
   overflow: hidden;
 }
@@ -386,7 +386,7 @@ footer .footer-sociais i {
   bottom: 3rem;
   object-fit: cover;
   transition: transform 1s ease;
-  animation: verticalSlide 12s infinite;
+  animation: verticalSlide 18s infinite;
   opacity: 0;
 }
 
@@ -398,16 +398,20 @@ footer .footer-sociais i {
   animation-delay: 6s; 
 }
 
+.hero-image-container img:nth-child(3) { 
+  animation-delay: 12s; 
+}
+
 @keyframes verticalSlide {
   0%, 45% {
     opacity: 1;
     transform: translateY(0);
   }
-  50%, 95% {
+  50%, 100% {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
+  95%, 0% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -648,7 +652,7 @@ header {
 }
 
 .menu-item {
-  color: #000000 !important;
+  color: #003366 !important;
   position: relative;
 
   transition: all 0.3s ease;
@@ -1110,7 +1114,7 @@ footer .footer-sociais i:hover {
     align-items: center;
     gap: 12px;
     padding: 12px;
-    color: #003366;
+    color: rgba(22, 9, 201, 0.9);
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
@@ -1119,7 +1123,7 @@ footer .footer-sociais i:hover {
   }
 
   .menu-item:hover {
-    background: rgba(0, 51, 102, 0.1);
+    background: #003366;
     transform: translateX(5px);
   }
 
