@@ -381,7 +381,7 @@ footer .footer-sociais i {
 
 .hero-image-container img {
   width: 100%;
-  height: 50%;
+  height: 90%;
   position: absolute;
   bottom: 3rem;
   object-fit: cover;
@@ -485,7 +485,7 @@ footer .footer-sociais i {
   
   .hero-image-container {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
   }
   
   .hero-image-container img {
@@ -497,19 +497,21 @@ footer .footer-sociais i {
   flex: 1;
   padding: 4rem;
   z-index: 2;
-  background-color: #ffffff;
+  background-color:#ffffff;
 }
 
 .hero-title {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #003B73;
+  cursor:default;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #000000;
+  color:#0074B7;
+  cursor:default;
 }
 
 @media (max-width: 768px) {
@@ -579,6 +581,8 @@ footer .footer-sociais i {
 
   .cta-button {
     padding: 0.8rem 1.6rem;
+    transform: scale(2) rotate(360deg)
+
   }
 }
 
@@ -618,10 +622,12 @@ a {
   text-decoration: none;
   color: var(--primary-blue);
   transition: color 0.3s ease;
+  
 }
 
 a:hover {
   color: var(--primary-red);
+  
 }
 
 /* Color Classes */
@@ -903,8 +909,8 @@ footer .footer-sociais i:hover {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 25%;
-  width: 50%;
+  left: 15%;
+  width: 73%;
   height: 3px;
   background: linear-gradient(90deg, #003366, #cc0000);
   /* Blue to red gradient */
@@ -1145,6 +1151,28 @@ footer .footer-sociais i:hover {
   margin: 0 auto;
   padding: 0 20px;
 }
+.section-title1{
+  text-align: center;
+  margin-bottom: 60px;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/*.section-title1::after {
+  content: '';
+  position: absolute;
+  top: 160px;
+  left: 36%;
+  width: 28%;
+  height: 3px;
+  background: linear-gradient(90deg, #003366, #cc0000);
+  /* Blue to red gradient 
+  border-radius: 2px;
+}*/
+
 
 .section-title {
   text-align: center;
@@ -1154,6 +1182,18 @@ footer .footer-sociais i:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 43.5%;
+  width: 13%;
+  height: 3px;
+  background: linear-gradient(90deg, #003366, #cc0000);
+  /* Blue to red gradient */
+  border-radius: 2px;
 }
 
 
@@ -1648,6 +1688,7 @@ section {
 
 .carousel-slide {
   min-width: 300px;
+  height: 300px;
   margin: 0 1rem;
   padding: 1.5rem;
   background: white;
@@ -1658,21 +1699,19 @@ section {
 
 .carousel-slide img {
   width: 100%;
-  height: 200px;
+  height: 80%;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  cursor:pointer;
 }
+
 
 .carousel-slide h3 {
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-.carousel-slide p {
-  color: #666;
-  font-size: 0.9rem;
-}
 
 .carousel-nav {
   display: flex;

@@ -173,3 +173,5 @@
     // Pause auto-play on hover
     track.addEventListener('mouseenter', () => clearInterval(autoPlay));
   });  
+
+  
