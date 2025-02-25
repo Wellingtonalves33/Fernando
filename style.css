@@ -1039,35 +1039,38 @@ footer .footer-sociais i:hover {
 }
 
 
-
 .hamburger-menu {
   display: none;
 }
+
 
 @media (max-width: 768px) {
   .none-block-md {
     display: none;
   }
-  .hamburger-menu {
-    display: block;
-    z-index: 1000;
-    
-  }
+  
   header {
     color: var(--light-gray);
+    width: 100%;
 
+  }
+  .hamburger-menu {
+    display: block;
+    position: relative;
+    z-index: 1000;
   }
 
   .menu-toggle {
     position: relative;
-    z-index: 1000;
+    display: block;
     width: 30px;
     height: 30px;
     background: transparent;
     border: none;
     cursor: pointer;
-    top: 45px;
     padding: 0;
+    margin-top: 100px;
+    z-index: 1000;
   }
 
   .menu-toggle span {
@@ -1136,6 +1139,12 @@ footer .footer-sociais i:hover {
   .menu-item i {
     width: 20px;
     text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
 
@@ -1753,4 +1762,77 @@ section {
 
 .dot.active {
   background: #0066cc;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-info,
+  .contact-form {
+    width: 95%;
+  }
+  
+  .contact-item iframe {
+    height: 200px;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1rem;
+  }
+  
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-item iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-item iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item iframe {
+    height: 250px;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+  }
 }
