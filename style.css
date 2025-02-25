@@ -1836,3 +1836,16 @@ section {
     align-items: center;
   }
 }
+
+.location-link:hover {
+  color: #007bff !important;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
