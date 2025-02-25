@@ -401,6 +401,11 @@ footer .footer-sociais i {
 .hero-image-container img:nth-child(3) { 
   animation-delay: 12s; 
 }
+.hero-content h3 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
 
 @keyframes verticalSlide {
   0%, 45% {
