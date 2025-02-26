@@ -390,17 +390,18 @@ footer .footer-sociais i {
   opacity: 0;
 }
 
-.hero-image-container img:nth-child(1) { 
-  animation-delay: 0s; 
+.hero-image-container img:nth-child(1) {
+  animation-delay: 0s;
 }
 
-.hero-image-container img:nth-child(2) { 
-  animation-delay: 6s; 
+.hero-image-container img:nth-child(2) {
+  animation-delay: 6s;
 }
 
-.hero-image-container img:nth-child(3) { 
-  animation-delay: 12s; 
+.hero-image-container img:nth-child(3) {
+  animation-delay: 12s;
 }
+
 .hero-content h3 {
   color: #003366;
   font-size: 1.5rem;
@@ -416,16 +417,19 @@ footer .footer-sociais i {
     z-index: 5;
     opacity: 1;
   }
+
   33% {
     transform: translateY(100%);
     z-index: 1;
     opacity: 0;
   }
+
   66% {
     transform: translateY(-100%);
     z-index: 0;
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     z-index: 5;
@@ -445,7 +449,7 @@ footer .footer-sociais i {
   .hero-image-container {
     width: 45%;
   }
-  
+
   .hero-image-container img {
     height: 45%;
   }
@@ -456,12 +460,12 @@ footer .footer-sociais i {
   .hero-section {
     flex-direction: column-reverse;
   }
-  
+
   .hero-image-container {
     width: 100%;
     height: 50vh;
   }
-  
+
   .hero-image-container img {
     height: 100%;
     bottom: 0;
@@ -473,36 +477,37 @@ footer .footer-sociais i {
   .hero-section {
     flex-direction: column-reverse;
   }
-  
+
   .hero-image-container {
     width: 100%;
     height: 60vh;
   }
-  
+
   .hero-image-container img {
     height: 100%;
     bottom: 0;
   }
 }
+
 .hero-content {
   flex: 1;
   padding: 4rem;
   z-index: 2;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
 .hero-title {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #003B73;
-  cursor:default;
+  cursor: default;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color:#666;
-  cursor:default;
+  color: #666;
+  cursor: default;
 }
 
 @media (max-width: 768px) {
@@ -547,9 +552,9 @@ footer .footer-sociais i {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-title {
-  top:100px;
+    top: 100px;
   }
-  }
+}
 
 @media (max-width: 480px) {
   .hero-title {
@@ -563,7 +568,6 @@ footer .footer-sociais i {
   .cta-button {
     padding: 0.8rem 1.6rem;
     transform: scale(2) rotate(360deg)
-
   }
 }
 
@@ -603,12 +607,12 @@ a {
   text-decoration: none;
   color: var(--primary-blue);
   transition: color 0.3s ease;
-  
+
 }
 
 a:hover {
   color: var(--primary-red);
-  
+
 }
 
 /* Color Classes */
@@ -817,6 +821,7 @@ footer .footer-sociais i:hover {
 .card-image {
   position: relative;
   overflow: hidden;
+
 }
 
 .card-image img {
@@ -851,9 +856,9 @@ footer .footer-sociais i:hover {
   margin-bottom: 0.5rem;
 }
 
-.product-description {
+.product-description li {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -990,7 +995,7 @@ footer .footer-sociais i:hover {
 }
 
 
- /* @media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 #animated-logo {
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 12px rgba(204, 0, 0, 0.8));
   }
@@ -1029,12 +1034,13 @@ footer .footer-sociais i:hover {
   .none-block-md {
     display: none;
   }
-  
+
   header {
     color: var(--light-gray);
     width: 100%;
 
   }
+
   .hamburger-menu {
     display: block;
     position: relative;
@@ -1149,7 +1155,8 @@ footer .footer-sociais i:hover {
     grid-template-columns: 1fr;
   }
 }
-.section-title1{
+
+.section-title1 {
   text-align: center;
   margin-bottom: 60px;
   color: #003366;
@@ -1268,7 +1275,8 @@ footer .footer-sociais i:hover {
   .about-card {
     padding: 20px;
   }
-  .logo{
+
+  .logo {
     width: 143px;
     right: 63px;
     top: 9px;
@@ -1461,7 +1469,8 @@ section {
   font-size: 1.2rem;
 }
 
-.contact-item a, .contact-item span {
+.contact-item a,
+.contact-item span {
   color: #666;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -1477,6 +1486,7 @@ section {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
 /* Base styles remain the same until media queries */
 
 /* Large Screens (1200px and up) */
@@ -1494,7 +1504,7 @@ section {
     gap: 40px;
     padding: 0 30px;
   }
-  
+
   .contact h2 {
     font-size: 2.2rem;
   }
@@ -1505,17 +1515,17 @@ section {
   .contact {
     padding: 60px 20px;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     max-width: 700px;
     gap: 40px;
   }
-  
+
   .contact h2 {
     font-size: 2rem;
   }
-  
+
   .contact-info h3 {
     font-size: 1.6rem;
   }
@@ -1526,21 +1536,21 @@ section {
   .contact {
     padding: 50px 15px;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .contact h2 {
     font-size: 1.8rem;
     margin-bottom: 40px;
   }
-  
+
   .contact-info {
     padding: 25px;
   }
-  
+
   .contact-form {
     padding: 30px;
   }
@@ -1551,47 +1561,48 @@ section {
   .contact {
     padding: 40px 15px;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 25px;
     padding: 0 10px;
   }
-  
+
   .contact h2 {
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
-  
+
   .contact-info {
     padding: 20px;
   }
-  
+
   .contact-info h3 {
     font-size: 1.4rem;
   }
-  
+
   .contact-form {
     padding: 20px;
   }
-  
+
   .form-group {
     margin-bottom: 25px;
   }
-  
+
   .submit-button {
     padding: 12px;
     font-size: 0.9rem;
   }
-  
+
   .contact-item {
     gap: 10px;
   }
-  
+
   .contact-item i {
     font-size: 1rem;
   }
 }
+
 /*---------------------------------------------------------*/
 
 .form-group {
@@ -1599,7 +1610,8 @@ section {
   margin-bottom: 30px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 12px 0;
   font-size: 1rem;
@@ -1624,10 +1636,10 @@ section {
   pointer-events: none;
 }
 
-.form-group input:focus ~ label,
-.form-group textarea:focus ~ label,
-.form-group input:valid ~ label,
-.form-group textarea:valid ~ label {
+.form-group input:focus~label,
+.form-group textarea:focus~label,
+.form-group input:valid~label,
+.form-group textarea:valid~label {
   top: -20px;
   font-size: 0.8rem;
   color: #003366;
@@ -1663,7 +1675,7 @@ section {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .contact h2 {
     font-size: 2rem;
   }
@@ -1699,7 +1711,7 @@ section {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 
@@ -1716,7 +1728,10 @@ section {
   margin-top: 2rem;
 }
 
-.carousel-btn {
+.carousel-btn-prev {
+  position: absolute;
+  top: 50%;  
+  transform: translateY(-50%);
   background: transparent;
   border: 2px solid #0066cc;
   color: #0066cc;
@@ -1726,9 +1741,39 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.carousel-btn:hover {
+.carousel-btn-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn-prev:hover {
+  background: #0066cc;
+  color: white;
+}
+
+.carousel-btn-next:hover {
   background: #0066cc;
   color: white;
 }
@@ -1744,27 +1789,28 @@ section {
   border-radius: 50%;
   background: #ddd;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: (background 0.3s ease);
 }
 
 .dot.active {
   background: #0066cc;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
   }
-  
+
   .contact-info,
   .contact-form {
     width: 95%;
   }
-  
+
   .contact-item iframe {
     height: 200px;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }
@@ -1774,33 +1820,34 @@ section {
   .contact {
     padding: 1rem;
   }
-  
+
   .contact h2 {
     font-size: 1.5rem;
   }
-  
+
   .contact-item {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
   }
-  
+
   .submit-button {
     width: 100%;
     padding: 0.8rem;
     font-size: 0.9rem;
   }
-  
+
   .contact-form {
     padding: 1rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
     padding: 0.6rem;
     font-size: 0.9rem;
   }
 }
+
 @media (max-width: 1024px) {
   .contact-item iframe {
     height: 350px;
@@ -1817,7 +1864,7 @@ section {
   .contact-item iframe {
     height: 250px;
   }
-  
+
   .contact-item {
     flex-direction: column;
     align-items: center;

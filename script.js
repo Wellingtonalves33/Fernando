@@ -174,4 +174,54 @@
     track.addEventListener('mouseenter', () => clearInterval(autoPlay));
   });  
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.carousel-btn-prev');
+    const nextButton = document.querySelector('.carousel-btn-next');
+    
+    let currentIndex = 0;
+    let cardWidth = cards[0].offsetWidth + 32; // 32 é o gap
+    let cardsPerView = window.innerWidth > 768 ? 3 : 1;
+    
+    // Anima entrada dos cards
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+    
+    function updateButtons() {
+        prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+        nextButton.style.display = 
+            currentIndex >= cards.length - cardsPerView ? 'none' : 'block';
+    }
+    
+    prevButton.addEventListener('click', () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateCarousel();
+        updateButtons();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        currentIndex = Math.min(currentIndex + 1, cards.length - cardsPerView);
+        updateCarousel();
+        updateButtons();
+    });
+      
+    // Atualiza em caso de redimensionamento
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth + 32;
+      cardsPerView = window.innerWidth > 768 ? 3 : 1;
+      currentIndex = Math.min(currentIndex, cards.length - cardsPerView);
+      updateCarousel();
+      updateButtons();
+  });
+  
+  // Inicializa
+  updateButtons();
+});
+
   
