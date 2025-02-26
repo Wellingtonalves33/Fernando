@@ -1881,3 +1881,61 @@ section {
   align-items: center;
   gap: 10px;
 }
+
+
+.linkedin-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #003366;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.linkedin-icon {
+  font-size: 28px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.linkedin-link:hover {
+  background: #005e93;
+  transform: rotate(360deg);
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
+}
+
+.linkedin-link::after {
+  content: "Quantyka Lab Supply";
+  position: absolute;
+  bottom: -30px;
+  font-size: 14px;
+  color: #003366;
+  width: 150px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin-link:hover::after {
+  opacity: 1;
+}
