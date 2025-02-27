@@ -93,7 +93,7 @@ a {
   .block-md {
     display: block;
     position: relative;
-    width: 770px;
+    width: 771px;
   }
 
   .none-md {
@@ -142,7 +142,7 @@ a {
   .flex-column-md {
     flex-direction: column;
   }
-} 
+}
 
 /* Cards */
 .card {
