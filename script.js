@@ -224,4 +224,96 @@
   updateButtons();
 });
 
+  // Script para o funcionamento do carrossel
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.hero-carousel-container img');
+  const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+  const prevBtn = document.querySelector('.carousel-nav.prev');
+  const nextBtn = document.querySelector('.carousel-nav.next');
   
+  let currentIndex = 0;
+  let interval;
+  const autoPlayTime = 5000; // Tempo em milissegundos entre slides
+  
+  // Inicializar o primeiro slide
+  slides[0].classList.add('active');
+  indicators[0].classList.add('active');
+  
+  // Função para mudar slide
+  function goToSlide(index) {
+    // Remover classes ativas
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Atualizar índice atual
+    currentIndex = index;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (currentIndex >= slides.length) currentIndex = 0;
+    
+    // Adicionar classes ativas
+    slides[currentIndex].classList.add('active');
+    indicators[currentIndex].classList.add('active');
+  }
+  
+  // Avançar para o próximo slide
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+  
+  // Voltar para o slide anterior
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+  
+  // Configurar autoplay
+  function startAutoplay() {
+    interval = setInterval(nextSlide, autoPlayTime);
+  }
+  
+  function stopAutoplay() {
+    clearInterval(interval);
+  }
+  
+  // Event listeners para botões de navegação
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+      prevSlide();
+      stopAutoplay();
+      startAutoplay(); // Reiniciar com novo tempo
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      nextSlide();
+      stopAutoplay();
+      startAutoplay(); // Reiniciar com novo tempo
+    });
+  }
+  
+  // Event listeners para indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', function() {
+      goToSlide(index);
+      stopAutoplay();
+      startAutoplay(); // Reiniciar com novo tempo
+    });
+  });
+  
+  // Pausar autoplay quando o mouse está sobre o carrossel
+  const carousel = document.querySelector('.hero-carousel');
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  
+  // Iniciar autoplay
+  startAutoplay();
+  
+  // Lidar com visibilidade da página
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+  });
+});
